@@ -1,17 +1,32 @@
 <?php
 
-function baseLength()
-{
-    $post = 0.1;
-    $railing = 1.5;
+$post = 0.1;
+$railing = 1.5;
 
+function baseLength($post, $railing)
+{
     $baseLength = ($post + $railing + $post);
-        echo $baseLength;
+        return $baseLength;
 }
 
-baseLength();
+baseLength($post, $railing);
 
-function
+function unit($post, $railing)
+{
+    $unit = ($railing + $post);
+        return $unit;
+}
+
+unit($post, $railing);
+
+function fencing($baseLength, $unit)
+{
+    while ($baseLength <= $baseLength + $unit);
+        $unit++;
+}
+
+fencing($baseLength, $unit);
+
 
 ?>
 
